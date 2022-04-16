@@ -14,7 +14,8 @@ pub struct NewLocker<'info> {
             base.key().to_bytes().as_ref()
         ],
         bump,
-        payer = payer
+        payer = payer,
+        space = 131 + 8,
     )]
     pub locker: Account<'info, Locker>,
 

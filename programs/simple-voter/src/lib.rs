@@ -109,6 +109,7 @@ pub struct InitializeElectorate<'info> {
         seeds = [b"SimpleElectorate".as_ref(), base.key().to_bytes().as_ref()],
         bump,
         payer = payer,
+        space = 105 + 8,
     )]
     pub electorate: Account<'info, Electorate>,
     /// TODO(michael): Docs
@@ -135,6 +136,7 @@ pub struct InitializeTokenRecord<'info> {
         ],
         bump,
         payer = payer,
+        space = 113 + 8,
     )]
     pub token_record: Account<'info, state::TokenRecord>,
     #[account(mut)]
